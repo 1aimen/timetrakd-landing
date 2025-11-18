@@ -138,6 +138,7 @@ const VerticalCutReveal = forwardRef<VerticalCutRevealRef, TextProps>(
     // Auto start animation
     useEffect(() => {
       if (autoStart) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         startAnimation();
       }
     }, [autoStart]);
