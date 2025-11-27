@@ -36,15 +36,13 @@ const contactFormSchema = z.object({
   }),
 });
 
-export function ContactSection() {
+export function FreeTrialSection() {
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
       email: "",
-      subject: "",
-      message: "",
     },
   });
 
@@ -60,21 +58,21 @@ export function ContactSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-sm text-center mb-16">
           <Badge variant="outline" className="mb-4">
-            Get In Touch
+            Get started now
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Need help or have questions?
+            Free trial
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our team is here to help you get the most out of ShadcnStore. Choose
-            the best way to reach out to us.
+            Fill out this short form and receive your free trial account.
           </p>
         </div>
 
         <div className="grid gap-8 ">
           {/* Contact Form */}
-          <div className="lg:col-span-2 order-1 lg:order-2">
-            <Card className="bg-transparent">
+          <div className="lg:col-span-2 grid grid-cols-2 order-1 lg:order-2">
+            <div>test</div>
+            <Card className="bg-transparent  border-0">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Mail className="h-5 w-5" />
@@ -131,42 +129,12 @@ export function ContactSection() {
                         </FormItem>
                       )}
                     />
-                    <FormField
-                      control={form.control}
-                      name="subject"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Subject</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Component request, bug report, general inquiry..."
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Message</FormLabel>
-                          <FormControl>
-                            <Textarea
-                              placeholder="Tell us how we can help you with ShadcnStore components..."
-                              rows={10}
-                              className="min-h-50"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <Button type="submit" className="w-full cursor-pointer">
-                      Send Message
+
+                    <Button
+                      type="submit"
+                      className="w-full text-base cursor-pointer"
+                    >
+                      Start free trial
                     </Button>
                   </form>
                 </Form>

@@ -9,14 +9,14 @@ import { DotPattern } from "@/components/dot-pattern";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background to-background/80 pt-20 sm:pt-32 pb-16">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background to-background/80 mt-20 sm:pt-32 pb-16">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <DotPattern className="opacity-100" size="md" fadeStyle="ellipse" />
       </div>
 
       <div className="container flex flex-row mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto my-8 max-w-4xl text-center">
           {/* Announcement Badge */}
 
           {/* Main Headline */}
@@ -37,9 +37,13 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Button size="lg" className="text-base cursor-pointer" asChild>
+            <Button
+              size="lg"
+              className="text-base text-white cursor-pointer"
+              asChild
+            >
               <Link href="/auth/sign-up">
-                Get Started Free
+                Get Started for Free
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

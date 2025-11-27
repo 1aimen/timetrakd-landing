@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Amethysta } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const amethysta = Amethysta({
+const amethysta = Inter({
   subsets: ["latin"],
   weight: "400",
 });

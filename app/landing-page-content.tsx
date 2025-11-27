@@ -18,6 +18,7 @@ import { AboutSection } from "./components/about-section";
 import InfoSection from "./components/info-section";
 import Faqs3 from "./components/faq";
 import { ResourceAllocation } from "./components/resource-allocation";
+import { FreeTrialSection } from "./components/freetrial-section";
 
 export function LandingPageContent() {
   return (
@@ -31,10 +32,9 @@ export function LandingPageContent() {
         <LogoCarousel />
         <InfoSection />
         <ResourceAllocation />
-
         <FeaturesSection />
-        <Faqs3 />
-        <ContactSection />
+        <FaqSection />
+        <FreeTrialSection />{" "}
       </main>
 
       {/* Footer */}

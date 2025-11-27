@@ -2,7 +2,9 @@ import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import { DashedLine } from "@/components/dashed-line";
-
+import { AvatarCircles } from "@/components/ui/avatar-circles";
+import { AnimatedList } from "@/components/ui/animated-list";
+import { AnimatedListDemo } from "@/components/landing/animated-notifications";
 const topItems = [
   {
     title: "Reusable issue templates.",
@@ -21,8 +23,8 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Simplify your workflows.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
+    title: "Simplify your workflows & integrations.",
+    description: "Use timetrakd, interface with any tool.",
     images: [
       { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
       { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
@@ -93,10 +95,10 @@ const bottomItems = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
     images: [
       {
-        src: "/resource-allocation/notifications.webp",
+        src: "/resource-allocation/notificationz.png",
         alt: "Notifications interface",
-        width: 305,
-        height: 280,
+        width: 805,
+        height: 880,
       },
     ],
     className:
@@ -105,11 +107,38 @@ const bottomItems = [
   },
 ];
 
+const avatars = [
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/16860528",
+    profileUrl: "https://github.com/dillionverma",
+  },
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/20110627",
+    profileUrl: "https://github.com/tomonarifeehan",
+  },
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/106103625",
+    profileUrl: "https://github.com/BankkRoll",
+  },
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/59228569",
+    profileUrl: "https://github.com/safethecode",
+  },
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/59442788",
+    profileUrl: "https://github.com/sanjay-mali",
+  },
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/89768406",
+    profileUrl: "https://github.com/itsarghyadas",
+  },
+];
+
 export const ResourceAllocation = () => {
   return (
     <section
       id="resource-allocation"
-      className="overflow-hidden container  pb-28 lg:pb-32 mx-auto"
+      className="overflow-hidden container   pb-28 lg:pb-32 mx-auto"
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
@@ -143,6 +172,7 @@ export const ResourceAllocation = () => {
                 className="md:pb-0"
               />
             ))}
+            <AnimatedListDemo />
           </div>
         </div>
         <DashedLine

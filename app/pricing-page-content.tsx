@@ -1,15 +1,10 @@
 "use client";
 
 import { LandingNavbar } from "./components/navbar";
-import { HeroSection } from "./components/hero-section";
-import { LogoCarousel } from "./components/logo-carousel";
-import { FeaturesSection } from "./components/features-section";
 import { ContactSection } from "./components/contact-section";
 import { LandingFooter } from "./components/footer";
-import InfoSection from "./components/info-section";
-import Faqs3 from "./components/faq";
-import { ResourceAllocation } from "./components/resource-allocation";
 import { PricingSection } from "./components/pricing-section";
+import { FaqSection } from "./components/faq-section";
 
 export function PricingPageContent() {
   return (
@@ -20,7 +15,7 @@ export function PricingPageContent() {
       {/* Main Content */}
       <main>
         <PricingSection />
-        <Faqs3 />
+        <FaqSection />
         <ContactSection />
       </main>
 

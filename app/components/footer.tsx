@@ -69,7 +69,7 @@ export function LandingFooter() {
   }
 
   return (
-    <footer className="border-t bg-background">
+    <footer className=" bg-primary/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Newsletter Section */}
         {/* <div className="mb-16">

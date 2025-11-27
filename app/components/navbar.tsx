@@ -40,13 +40,32 @@ import { useTheme } from "@/hooks/use-theme";
 const navigationItems = [
   { name: "Why Timetrakd", href: "#features", hasMegaMenu: true },
   { name: "For Who ?", href: "#features", hasMegaMenu: true },
-  { name: "Solutions", href: "#features", hasMegaMenu: true },
-  { name: "Pricing", href: "#pricing" },
+  { name: "Solutions", href: "", hasMegaMenu: true },
+  { name: "Pricing", href: "/pricing" },
   { name: "Frequent questions", href: "#faq" },
   { name: "Contact Us", href: "#contact" },
 ];
 
 // Solutions menu items for mobile
+
+const forWhoItems = [
+  { title: "Browse Products" },
+  { name: "Free Blocks", href: "#free-blocks" },
+  { name: "Premium Templates", href: "#premium-templates" },
+  { name: "Admin Dashboards", href: "#admin-dashboards" },
+  { name: "Landing Pages", href: "#landing-pages" },
+  { title: "Categories" },
+  { name: "E-commerce", href: "#ecommerce" },
+  { name: "SaaS Dashboards", href: "#saas-dashboards" },
+  { name: "Analytics", href: "#analytics" },
+  { name: "Authentication", href: "#authentication" },
+  { title: "Resources" },
+  { name: "Documentation", href: "#docs" },
+  { name: "Component Showcase", href: "#showcase" },
+  { name: "GitHub Repository", href: "#github" },
+  { name: "Design System", href: "#design-system" },
+];
+
 const solutionsItems = [
   { title: "Browse Products" },
   { name: "Free Blocks", href: "#free-blocks" },
@@ -131,10 +150,10 @@ export function LandingNavbar() {
         <div className="hidden xl:flex items-center space-x-2">
           <ModeToggle variant="ghost" />
 
-          <Button variant="ghost" asChild className="cursor-pointer">
+          <Button variant="ghost" asChild className="text-base cursor-pointer">
             <Link href="/auth/sign-in">Sign In</Link>
           </Button>
-          <Button asChild className="cursor-pointer">
+          <Button asChild className="text-base text-white cursor-pointer">
             <Link href="/auth/sign-up">Get Started</Link>
           </Button>
         </div>
@@ -261,28 +280,20 @@ export function LandingNavbar() {
               <div className="border-t p-6 space-y-4">
                 {/* Primary Actions */}
                 <div className="space-y-3">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    asChild
-                    className="w-full cursor-pointer"
-                  >
-                    <Link href="/dashboard">
-                      <LayoutDashboard className="size-4" />
-                      Dashboard
-                    </Link>
-                  </Button>
-
                   <div className="grid grid-cols-2 gap-3">
                     <Button
                       variant="outline"
                       size="lg"
                       asChild
-                      className="cursor-pointer"
+                      className="cursor-pointer "
                     >
                       <Link href="/auth/sign-in">Sign In</Link>
                     </Button>
-                    <Button asChild size="lg" className="cursor-pointer">
+                    <Button
+                      asChild
+                      size="lg"
+                      className="text-base text-white cursor-pointer"
+                    >
                       <Link href="/auth/sign-up">Get Started</Link>
                     </Button>
                   </div>
