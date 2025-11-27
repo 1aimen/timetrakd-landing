@@ -135,10 +135,13 @@ export function FeaturesSection() {
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-4 pe-4 pt-2">
-              <Button size="lg" className="cursor-pointer">
+              <Button
+                size="lg"
+                className="cursor-pointer text-base text-white dark:text-black "
+              >
                 <a
                   href="https://shadcnstore.com/templates"
-                  className="flex items-center"
+                  className=" flex items-center"
                 >
                   Browse Templates
                   <ArrowRight className="ms-2 size-4" aria-hidden="true" />

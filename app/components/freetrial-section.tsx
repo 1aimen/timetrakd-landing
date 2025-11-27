@@ -132,7 +132,7 @@ export function FreeTrialSection() {
 
                     <Button
                       type="submit"
-                      className="w-full text-base cursor-pointer"
+                      className="w-full text-base text-white cursor-pointer"
                     >
                       Start free trial
                     </Button>
