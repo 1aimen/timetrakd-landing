@@ -8,56 +8,64 @@ import { useState } from "react";
 
 const plans = [
   {
-    name: "Free",
-    description: "Perfect for getting started with essential components",
-    monthlyPrice: 0,
-    yearlyPrice: 0,
+    name: "Core",
+    description:
+      "Ideal for small teams needing essential time tracking features.",
+    monthlyPrice: 17.5,
+    yearlyPrice: 210,
     features: [
-      "Access to 50+ free components",
-      "Basic dashboard templates",
-      "Community support",
-      "GitHub repository access",
-      "Documentation and guides",
+      "Base platform fee included",
+      "Hosting, maintenance & support",
+      "Regular updates included",
+      "iOS & Android mobile apps",
+      "Employee Time Tracking module (€4.40/user optional)",
+      "Project Time Tracking module (€8.40/user optional)",
+      "Leave Management module (€2.80/user optional)",
     ],
-    cta: "Get Started",
+    cta: "Start with Core",
     popular: false,
   },
   {
-    name: "Pro",
-    description: "For developers who need premium templates and components",
-    monthlyPrice: 19,
-    yearlyPrice: 15,
+    name: "Business",
+    description:
+      "Best for teams that want full workforce tracking and automation.",
+    monthlyPrice: 17.5, // base fee still applies
+    yearlyPrice: 210,
     features: [
-      "Premium template collection",
-      "Advanced dashboard layouts",
-      "Priority support",
-      "Commercial use license",
-      "Early access to new releases",
-      "Figma design files",
-      "Custom component requests",
-      "Direct developer access",
-      "Exclusive design resources",
+      "Everything in Core",
+      "Add employee modules per user:",
+      "• Employee Time Tracking (€4.40/user)",
+      "• Project Time Tracking (€8.40/user)",
+      "• Leave Management (€2.80/user)",
+      "Multiuser Android Time Clock (€10/month)",
+      "Multiuser Web Time Clock (€10/month)",
+      "Access to all virtual time clocks",
+      "Free mobile apps",
     ],
-    cta: "Get Started",
     popular: true,
-    includesPrevious: "All Free features, plus",
+    cta: "Most Popular",
+    includesPrevious: "All Core features, plus",
   },
   {
-    name: "Lifetime",
-    description: "One-time payment for lifetime access to everything",
-    monthlyPrice: 299,
-    yearlyPrice: 299,
+    name: "Enterprise",
+    description:
+      "For companies needing hardware terminals, onboarding, and integrations.",
+    monthlyPrice: 17.5, // base fee
+    yearlyPrice: 210,
     features: [
-      "Lifetime updates and support",
-      "Private Discord channel",
-      "No recurring fees ever",
-      "Future template access",
-      "VIP support priority",
-      "Exclusive beta features",
+      "Everything in Business",
+      "Hardware Time Clocks:",
+      "• Evo Basic — from €29.90/month",
+      "• Evo Smart — from €34.90/month",
+      "• Evo Advanced — from €49.90/month",
+      "Dedicated onboarding service (pricing on request)",
+      "On-site or remote training (pricing on request)",
+      "API & integration support",
+      "Custom setups and workflows",
     ],
-    cta: "Get Started",
+    cta: "Contact Sales",
     popular: false,
-    includesPrevious: "All Pro features, plus",
+    includesPrevious: "All Business features, plus",
   },
 ];
 
@@ -176,7 +184,7 @@ export function PricingSection() {
                           className="flex items-center gap-3"
                         >
                           <Check
-                            className="text-muted-foreground size-4 flex-shrink-0"
+                            className="text-primary size-4 shrink-0"
                             strokeWidth={2.5}
                           />
                           <span>{feature}</span>
